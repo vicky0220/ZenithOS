@@ -1,7 +1,7 @@
 # Zenith OS — Zero-Capex Industry 4.0 Optical Operating System
 
 > **BUILD 2036 | Frontier 04: Manufacturing Renaissance (Industry 4.0 & Next-Gen Supply Chains)**  
-> Transforming existing factory RTSP/Hikvision cameras into an autonomous, Zero-Trust smart factory and supply-chain command plane—without replacing a single camera.
+> Transforming any existing ONVIF/RTSP industrial IP camera into an autonomous, Zero-Trust smart factory and supply-chain command plane—without replacing a single camera.
 
 [![Live Prototype](https://img.shields.io/badge/Live%20Prototype-Google%20Cloud%20Run-15803D?style=for-the-badge)](https://zenith-os-dashboard-610496103443.asia-south1.run.app)
 [![Demo Video](https://img.shields.io/badge/Demo%20Video-3%20Min%20Walkthrough-D91E2A?style=for-the-badge)](INSERT_DEMO_VIDEO_URL)
@@ -24,14 +24,14 @@ Verify the live deployment directly in any desktop browser (no installation requ
 
 ## 🏭 The Industrial Problem
 
-Multi-plant manufacturing groups operate hundreds of standard ₹3k–₹5k RTSP cameras that remain operationally blind—leaking crores annually to loading-bay detention penalties, shop-floor fire/PPE delays, and unnoticed camera downtime.
+Multi-plant manufacturing groups operate hundreds of standard ₹3k–₹5k IP cameras across mixed-vendor estates that remain operationally blind—leaking crores annually to loading-bay detention penalties, shop-floor fire/PPE delays, and unnoticed camera downtime.
 
 * **Rip-and-Replace Fails:** Upgrading 30–200 cameras to standalone cloud-AI hardware costs **₹37L–₹40L+ per plant** and saturates factory WAN bandwidth.
 * **Legacy NVRs Lose Evidence:** Local NVRs run siloed per plant and overwrite footage every **15–30 days**, leaving teams blind during audits, disputes, and insurance claims.
 
 ## 🚀 The Zenith OS Solution
 
-Zenith OS plugs a compact on-premise edge node (**NVIDIA Jetson Orin Nano 8GB** for zero-Capex pilots; **NVIDIA RTX Edge Server** for 20–30 camera plants) directly into existing Hikvision/RTSP NVRs:
+Zenith OS is **100% hardware-agnostic**. It plugs a compact on-premise edge node (**NVIDIA Jetson Orin Nano 8GB** for zero-Capex pilots; **NVIDIA RTX Edge Server** for 20–30 camera plants) directly into existing ONVIF/RTSP IP cameras and NVRs:
 
 1. **99.99% Local Edge Filtering:** Local `YOLOv8n` + OpenCV Laplacian blur gating (`σ² ≥ 35`) filters raw video on-site at ₹0 API cost and redacts worker faces for DPDP compliance. **Zero raw video leaves the factory LAN.**
 2. **Multimodal Industrial Reasoning:** Only sharp, verified event frames route over outbound HTTPS to **Vertex AI (Gemini 2.5 Flash)** for contextual operational reasoning at **~₹0.07 (7 paise) per event**.
@@ -55,7 +55,7 @@ Zenith OS plugs a compact on-premise edge node (**NVIDIA Jetson Orin Nano 8GB** 
 ## 🏗️ Hybrid Edge-to-Cloud Architecture
 
 ```text
-[Existing Factory RTSP / Hikvision NVR] (Zero Camera Replacement)
+[Any Existing ONVIF / RTSP IP Camera & NVR] (Zero Camera Replacement)
                   │
                   ▼
 ┌──────────────────────────────────────────────────────────┐
@@ -87,7 +87,7 @@ Zenith OS plugs a compact on-premise edge node (**NVIDIA Jetson Orin Nano 8GB** 
 
 ## 📊 Measured Benchmarks & Unit Economics
 
-| Metric | Legacy NVR / Cloud CCTV | **Zenith OS (Measured)** |
+| Metric | Legacy NVR / Cloud VMS | **Zenith OS (Measured)** |
 | :--- | :--- | :--- |
 | **Cloud Bandwidth Egress** | 4–8 Mbps/cam continuous | **99.99% Reduction** (`27,484.6 MB → 1,843.8 KB`) |
 | **AI Reasoning Cost** | Unviable 24×7 cloud upload | **~₹0.07 / verified event** (Gemini 2.5 Flash) |
@@ -114,7 +114,7 @@ This public showcase repository contains the **Zenith OS Command Deck frontend**
 
 ## 👥 Team
 
-* **Vignesh A** — Co-Founder (B.E., MIT Chennai | MBA, IIM Raipur) · Industrial CCTV Domain & Enterprise Process/SLA Architecture
+* **Vignesh A** — Co-Founder (B.E., MIT Chennai | MBA, IIM Raipur) · Industrial Surveillance Domain & Enterprise Process/SLA Architecture
 * **Anirudh MR** — Co-Founder (B.E., MIT Chennai) · Digital Analytics, Data Engineering & Enterprise Modeling
 
 ## License
